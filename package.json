@@ -1,0 +1,120 @@
+{
+  "name": "comment2var",
+  "displayName": "comment2var",
+  "description": "comment2var",
+  "version": "0.0.3",
+  "publisher": "caiwu",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:plaintext",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:vue",
+    "onLanguage:html",
+    "onLanguage:css",
+    "onLanguage:json",
+    "onLanguage:markdown",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "javascript",
+        "extensions": [
+          ".js"
+        ],
+        "aliases": [
+          "JavaScript",
+          "javascript"
+        ]
+      },
+      {
+        "id": "typescript",
+        "extensions": [
+          ".ts"
+        ],
+        "aliases": [
+          "TypeScript",
+          "typescript"
+        ]
+      },
+      {
+        "id": "vue",
+        "extensions": [
+          ".vue"
+        ],
+        "aliases": [
+          "Vue",
+          "vue"
+        ]
+      },
+      {
+        "id": "html",
+        "extensions": [
+          ".html",
+          ".htm"
+        ],
+        "aliases": [
+          "HTML",
+          "html"
+        ]
+      },
+      {
+        "id": "css",
+        "extensions": [
+          ".css"
+        ],
+        "aliases": [
+          "CSS",
+          "css"
+        ]
+      },
+      {
+        "id": "json",
+        "extensions": [
+          ".json"
+        ],
+        "aliases": [
+          "JSON",
+          "json"
+        ]
+      },
+      {
+        "id": "plaintext",
+        "extensions": [
+          ".txt"
+        ],
+        "aliases": [
+          "Plain Text",
+          "plaintext"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.13.0",
+    "typescript": "^5.6.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
